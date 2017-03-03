@@ -8,6 +8,9 @@ build:
 
 run:
 	docker run -p 4567:4567 $(REGISTRY)/$(COMPANY)/$(PROJECT)
+	
+start:
+	docker run -d -p 4567:4567 $(REGISTRY)/$(COMPANY)/$(PROJECT)
 
 push:
 	docker push $(REGISTRY)/$(COMPANY)/$(PROJECT)
